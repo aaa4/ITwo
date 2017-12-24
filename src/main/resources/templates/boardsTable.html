@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>boardsTable</title>
+</head>
+<body>
+<h1>Board table</h1>
+
+<p data-th-text="unit2"></p>
+
+<a data-th-href="@{/addNewBoard}">add</a>
+<form action="#" data-th-action="@{/addNewBoard}">
+    <input type="submit" value="add"/>
+</form>
+
+
+<table>
+    <tr>
+        <th>the board id</th>
+        <th>board number</th>
+        <th>serial number</th>
+        <th>Action</th>
+    </tr>
+    <tr data-th-each="board : ${boards}">
+        <td data-th-text="${board.id}"></td>
+        <td data-th-text="${board.boardNumber}"></td>
+        <td data-th-text="${board.serialNumber}"></td>
+        <td>
+
+            <a data-th-href="@{'/addBoards?id=' + ${board.id}}">update</a>
+
+        </td>
+        <td>
+            <a data-th-href="@{'/getunitsList?boardId=' + ${board.id}}">units</a>
+        </td>
+        <td>
+            <a data-th-href="@{'/deleteBoard?boardId=' + ${board.id}}">delete</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

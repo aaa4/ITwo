@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>updateUnit</title>
+</head>
+<body>
+
+
+<form action="#" data-th-action="@{/updateUnit}" data-th-object="${unit}" method="post">
+
+    <label for="type">Unit type</label>
+    <input type="text" id="type" data-th-field="${unit.unitType}"/>
+
+    <label for="date">Release date</label>
+    <input type="text" id="date" data-th-field="${unit.releaseDate}"/>
+
+    <label for="note">Note</label>
+    <input type="text" id="note" data-th-field="${unit.note}"/>
+
+
+    <input type="submit" value="Add"/>
+</form>
+</body>
+</html>

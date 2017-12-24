@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Full units table</title>
+</head>
+<body>
+
+
+<table>
+    <tr>
+        <th># id</th>
+        <th>the type</th>
+        <th>release date</th>
+        <th>Some note</th>
+    </tr>
+    <tr data-th-each="table: ${units}">
+        <td data-th-text="${table.id}"></td>
+        <td data-th-text="${table.unitType}"></td>
+        <td data-th-text="${table.releaseDate}"></td>
+        <td data-th-text="${table.note}"></td>
+    </tr>
+</table>
+</body>
+</html>

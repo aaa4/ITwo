@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"/>
+</head>
+<body>
+<div class="container">
+
+    <table class="table  table-bordered table-hover">
+        <thead class="thead-dark">
+        <th scope="col">First name</th>
+        <th scope="col">Last name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Hobby</th>
+        <th scope="col">Channel</th>
+
+        </thead>
+        <tbody>
+        <tr data-th-each="instructor : ${instructors}">
+            <td data-th-text="${instructor.fname}"></td>
+            <td data-th-text="${instructor.lname}"></td>
+            <td data-th-text="${instructor.email}"></td>
+            <td data-th-text="${instructor.hobby}"></td>
+            <td data-th-text="${instructor.channel}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>unitsList</title>
+</head>
+<body>
+<p> text : <span data-th-text="${boardId}"></span></p>
+
+
+<p> text : <span data-th-text="@{'/addNewUnit?boardId=' + ${boardId}}"></span></p>
+<a data-th-href="@{'/addNewUnit?boardId=' + ${boardId}}">add</a>
+    <table>
+        <tr>
+            <th>Unit idx</th>
+            <th>Unit type</th>
+            <th>Release date</th>
+            <th>Note</th>
+        </tr>
+        <tr data-th-each="unit: ${units}">
+            <td data-th-text="${unit.id}"></td>
+            <td data-th-text="${unit.unitType}"></td>
+            <td data-th-text="${unit.releaseDate}"></td>
+            <td data-th-text="${unit.note}"></td>
+            <td>
+                <a data-th-href="@{'/updateUnit?unitId=' + ${unit.id}}">update</a>
+            </td>
+            <td>
+                <a data-th-href="@{'/deleteUnit'(unitId=${unit.id},boardId=${boardId})}">delete</a>
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Delete table</title>
+</head>
+<body>
+    <h1>Warning!</h1>
+    <p>You want to delete the boar number <span data-th-text="${NumberAndSerial}"></span></p>
+    <form action="#" data-th-action="@{/deleteBoard}" data-th-object="${board}" method="post">
+        <input type="hidden" data-th-field="${board.id}"/>
+        <input type="submit" value="submit"/>
+        
+    </form>
+</body>
+</html>

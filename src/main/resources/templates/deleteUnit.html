@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Delete unit</title>
+</head>
+<body>
+<h2> Удаление</h2>
+<P>boardId = <span data-th-text="${boardId}"></span></P>
+<p>Вы точно уверены что хотите удалить блок <span data-th-text="${unit.unitType}"></span>  ?</p>
+<form action="#" data-th-object="${unit}" data-th-action="@{/deleteUnit}" method="post">
+    <input type="submit" value="Delete"/>
+</form>
+
+</body>
+</html>

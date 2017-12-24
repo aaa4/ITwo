@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>boardAndUnitsTable</title>
+</head>
+<body>
+<h3>
+    My form
+</h3>
+<form action="#" data-th-action="@{/formTwo}" data-th-object="${combo}" method="post">
+
+    <input type="hidden" name="" data-th-field="${combo.boards.id}"/>
+
+    <label for="1">Board number</label>
+    <input type="text" name="" id="1" data-th-field="${combo.boards.boardNumber}" placeholder="text"/>
+
+    <label for="2">Serial number</label>
+    <input type="text" name="" id="2" data-th-field="${combo.boards.serialNumber}" placeholder="text"/>
+
+    <label for="3">Unit type</label>
+    <input type="text" name="" id="3" data-th-field="${combo.unitsTable.unitType}"/>
+
+    <label for="5">Release date</label>
+    <input type="text" name="" id="5" data-th-field="${combo.unitsTable.releaseDate}"/>
+
+    <label for="6">Note</label>
+    <input type="text" name="" id="6" data-th-field="${combo.unitsTable.note}"/>
+
+    <input type="submit" value="submit"/>
+
+
+
+</form>
+</body>
+</html>

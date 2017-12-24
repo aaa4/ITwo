@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>form1</title>
+</head>
+<body>
+<form action="#" data-th-action="@{/new}" method="POST">
+    <p>fname <input type="text" data-th-field="${instructor.firstName}"/></p>
+    <p>sname <input type="text" data-th-field="${instructor.secondName}"/></p>
+    <p>email <input type="text" data-th-field="${instructor.email}"/></p>
+    <p>hobby <input type="text" data-th-field="${detail.hobby}"/></p>
+    <p>youtubeChannel <input type="text" data-th-field="${detail.youtubeChannel}"/></p>
+    <p><input type="submit" value="submit"/></p>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<h1>This is request params</h1>
+<p>param A <span data-th-text="${paramA}"></span></p>
+<p>param B <span data-th-text="${paramB}"></span></p>
+<p>param C <span data-th-text="${paramC}"></span></p>
+<p>param D <span data-th-text="${paramD}"></span></p>
+<p>param E <span data-th-text="${paramE}"></span></p>
+<p>param F <span data-th-text="${paramF}"></span></p>
+<p> link   <a data-th-href="@{'/updateUnit'(paramA=${paramA},paramB=${paramB})}">update</a> </p>
+
+</body>
+</html>

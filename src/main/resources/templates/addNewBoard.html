@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>addNewBoard</title>
+</head>
+<body>
+<form action="#" data-th-object="${board}" data-th-action="@{/addNewBoard}" method="post">
+    <label for="boardNumber">Serial number</label>
+    <input type="text" id="boardNumber" data-th-field="${board.boardNumber}" placeholder="boardNumber"/>
+    
+    <label for="serial">Serial number</label>
+    <input type="text" id="serial" data-th-field="${board.serialNumber}" placeholder="serialNumber"/>
+
+    <input type="submit" value="Add new board"/>
+   
+</form>
+</body>
+</html>
